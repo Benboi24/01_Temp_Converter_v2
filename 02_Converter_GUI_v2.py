@@ -122,9 +122,9 @@ class Converter:
 
     def round_it(self, to_round):
         if to_round % 1 == 0:
-            rounded = "{:.0f".format(to_round)
+            rounded = int(to_round)
         else:
-            rounded = "{:.1f".format(to_round)
+            rounded = round(to_round, 1)
 
         return rounded
 
