@@ -81,7 +81,6 @@ class Converter:
 
         try:
             to_convert = float(to_convert)
-            print("as a number", to_convert)
             has_errors = "no"
 
             # Check and convert to Fahrenheit
@@ -117,8 +116,6 @@ class Converter:
         except ValueError:
             self.converted_label.configure(text="Enter a number!!", fg="red")
             self.to_convert_entry.configure(bg=error)
-
-        print("you pushed a button")
 
     def round_it(self, to_round):
         if to_round % 1 == 0:
