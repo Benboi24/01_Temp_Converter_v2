@@ -136,6 +136,10 @@ class Converter:
 
         return rounded
 
+    def history(self, all_calc_list):
+        pass
+
+
 # main routine
 if __name__ == "__main__":
     root = Tk()

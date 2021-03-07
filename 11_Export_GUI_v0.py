@@ -1,6 +1,5 @@
-import = ...
 from tkinter import *
-from functools import partial # To prevent unwanted windows
+from functools import partial   # To prevent unwanted windows
 
 import random
 
@@ -17,16 +16,16 @@ class Converter:
 
         # Temperature Converter Heading (row 0)
         self.temp_converter_label = Label(self.converter_frame,
-                                        text="Temperature Converter",
-                                        font=("Arial", "16", "bold"),
-                                        bg=background_color,
-                                        padx=10, pady=10)
+                                          text="Temperature Converter",
+                                          font=("Arial", "16", "bold"),
+                                          bg=background_color,
+                                          padx=10, pady=10)
         self.temp_converter_label.grid(row=0)
 
         # Export Button (row 1)
         self.history_button = Button(self.converter_frame, text="Export",
-                                  font=("Arial", "14"),
-                                  padx=10, pady=10, command=self.export)
+                                     font=("Arial", "14"),
+                                     padx=10, pady=10, command=self.export)
         self.history_button.grid(row=1)
 
     def export(self):
@@ -100,7 +99,6 @@ class Export:
         self.cancel_button = Button(self.save_cancel_frame, text="Cancel",
                                     command=partial(self.close_export, partner))
         self.cancel_button.grid(row=0, column=1)
-
 
     def close_export(self, partner):
         # Put export button back to normal...
