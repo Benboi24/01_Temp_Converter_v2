@@ -10,7 +10,7 @@ class Converter:
         background_color = "light blue"
 
         # Initialise list to hold calculation history
-        self.all_calculations = []
+        self.all_calc_list = []
 
         # Converter Frame
         self.converter_frame = Frame(bg=background_color,
@@ -66,9 +66,13 @@ class Converter:
         self.hist_help_frame = Frame(self.converter_frame)
         self.hist_help_frame.grid(row=5, pady=10)
 
-        self.calc_hist_button = Button(self.hist_help_frame, font="Arial 12 bold",
-                                       text="Calculation History", width=15)
-        self.calc_hist_button.grid(row=0, column=0)
+        self.history_button = Button(self.hist_help_frame, font="Arial 12 bold",
+                                       text="Calculation History", width=15,
+                                       command=lambda: self.history(self.all_calc_list))
+        self.history_button.grid(row=0, column=0)
+
+        if len(self.all_calc_list) == 0:
+            self.history_button.config(state=DISABLED)
 
         self.help_button = Button(self.hist_help_frame, font="Arial 12 bold",
                                   text="Help", width=5)
