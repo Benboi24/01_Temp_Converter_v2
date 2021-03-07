@@ -3,6 +3,7 @@ from functools import partial   # To prevent unwanted windows
 
 import random
 
+
 class Converter:
     def __init__(self):
 
@@ -32,7 +33,6 @@ class Converter:
         get_export = Export(self)
 
 
-
 class Export:
     def __init__(self, partner):
 
@@ -48,7 +48,6 @@ class Export:
         # 'releases' export button
         self.export_box.protocol('WM_DELETE_WINDOW',
                                  partial(self.close_export, partner))
-
 
         # Set up GUI Frame
         self.export_frame = Frame(self.export_box, width=300, bg=background)

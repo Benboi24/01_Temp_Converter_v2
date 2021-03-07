@@ -1,6 +1,5 @@
 from tkinter import *
 from functools import partial   # To prevent unwanted windows
-
 import random
 
 
@@ -10,11 +9,17 @@ class Converter:
         # Formatting variables
         background_color = "light blue"
 
-        # Initialise list to hold calculation history
-        self.all_calc_list = []
+        # In actual program this is blank and is populated with user calculations
+        self.all_calc_list = ['O degrees C is -17.8 degrees F',
+                              '0 degrees C is 32 degrees F',
+                              '40 degrees C is 104 degrees F',
+                              '40 degrees C is 4.4 degrees F',
+                              '12 degrees C is 53.6 degrees F',
+                              '24 degrees C is 75.2 degrees F',
+                              '100 degrees C is 37.8 degrees F']
 
-        # Converter Frame
-        self.converter_frame = Frame(bg=background_color,
+        # Converter Main Screen GUI...
+        self.converter_frame = Frame(width=300, height=300, bg=background_color,
                                      pady=10)
         self.converter_frame.grid()
 
@@ -67,13 +72,9 @@ class Converter:
         self.hist_help_frame = Frame(self.converter_frame)
         self.hist_help_frame.grid(row=5, pady=10)
 
-        self.history_button = Button(self.hist_help_frame, font="Arial 12 bold",
-                                       text="Calculation History", width=15,
-                                       command=lambda: self.history(self.all_calc_list))
-        self.history_button.grid(row=0, column=0)
-
-        if len(self.all_calc_list) == 0:
-            self.history_button.config(state=DISABLED)
+        self.calc_hist_button = Button(self.hist_help_frame, font="Arial 12 bold",
+                                       text="Calculation History", width=15)
+        self.calc_hist_button.grid(row=0, column=0)
 
         self.help_button = Button(self.hist_help_frame, font="Arial 12 bold",
                                   text="Help", width=5)
@@ -136,10 +137,6 @@ class Converter:
             rounded = round(to_round, 1)
 
         return rounded
-
-    def history(self, all_calc_list):
-        pass
-
 
 # main routine
 if __name__ == "__main__":

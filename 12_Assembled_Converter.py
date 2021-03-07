@@ -1,7 +1,8 @@
 from tkinter import *
-from functools import partial # To prevent unwanted windows
+from functools import partial   # To prevent unwanted windows
 
 import random
+
 
 class Converter:
     def __init__(self):
@@ -20,7 +21,7 @@ class Converter:
         # Temperature Converter Heading (row 0)
         self.temp_heading_label = Label(self.converter_frame,
                                         text="Temperature Converter",
-                                        font="Arial 16 bold",
+                                        font=("Arial", "16", "bold"),
                                         bg=background_color,
                                         padx=10, pady=10)
         self.temp_heading_label.grid(row=0)
@@ -67,8 +68,8 @@ class Converter:
         self.hist_help_frame.grid(row=5, pady=10)
 
         self.history_button = Button(self.hist_help_frame, font="Arial 12 bold",
-                                       text="Calculation History", width=15,
-                                       command=lambda: self.history(self.all_calc_list))
+                                     text="Calculation History", width=15,
+                                     command=lambda: self.history(self.all_calc_list))
         self.history_button.grid(row=0, column=0)
 
         if len(self.all_calc_list) == 0:

@@ -1,7 +1,8 @@
 from tkinter import *
-from functools import partial # To prevent unwanted windows
+from functools import partial   # To prevent unwanted windows
 
 import random
+
 
 class Converter:
     def __init__(self):
@@ -24,14 +25,13 @@ class Converter:
 
         # history Button (row 1)
         self.history_button = Button(self.converter_frame, text="Help",
-                                  font=("Arial", "14"),
-                                  padx=10, pady=10,
-                                command=lambda: self.history(self.all_calc_list))
+                                     font=("Arial", "14"),
+                                     padx=10, pady=10,
+                                     command=lambda: self.history(self.all_calc_list))
         self.history_button.grid(row=1)
 
     def history(self, calc_history):
         History(self, calc_history)
-
 
 
 class History:
