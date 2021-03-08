@@ -73,7 +73,7 @@ class History:
         if len(calc_history) >= 7:
             for item in range(0, 7):
                 history_string += calc_history[len(calc_history)
-                                               - item - 1]+"\n"
+                                               - item - 1] + "\n"
 
         else:
             for item in calc_history:

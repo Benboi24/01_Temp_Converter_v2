@@ -71,3 +71,44 @@ class History:
         self.how_heading = Label(self.history_frame, text="Calculation History",
                                  font="arial 19 bold", bg=background)
         self.how_heading.grid(row=0)
+
+        # history text (label, row 1)
+        self.history_text - Label(self.history_frame, text="Here are your most recent "
+                                                           "calculations. Please use the "
+                                                           "export button to create a text "
+                                                           "file of all your calculations for "
+                                                           "this season", wrap=250,
+                                  font="arial 10 italic",
+                                  justify=LEFT, bg=background, fg="maroon",
+                                  padx=10, pady=10)
+        self.history_text.grid(row=1)
+
+        # History Output goes here.. (row 2)
+
+        # Generate string from list of calculations...
+        history_string = ""
+
+        if len(calc_history) >= 7:
+            for item in range(0, 7):
+                history_string += calc_history[len(calc_history)
+                                               - item - 1] + "\n"
+
+        else:
+            for item in calc_history:
+                history_string += calc_history[len(calc_history) -
+                                               calc_history.index(item) - 1] + "\n"
+                self.history_text.config(text="Here is your calculation "
+                                              "history. You can use the "
+                                              "export button to save this "
+                                              "data to a text file if"
+                                              "desired.")
+
+            # Dismiss Button
+            self.dismiss_button = Button(self.export_dismiss_frame, test="Dismiss",
+                                         font="Arial 12 bold", command=partial(self.close_history))
+            self.dismiss_button.grid(row=0, column=1)
+
+        def close_history(self, partner):
+            # Put history button back to normal...
+            partner.history_button.config(state=NORMAL)
+            self.history_box.destroy()
