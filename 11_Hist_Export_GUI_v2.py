@@ -78,9 +78,9 @@ class History:
                                                            "export button to create a text "
                                                            "file of all your calculations for "
                                                            "this season", wrap=250,
-                                  font="arial 10 italic",
-                                  justify=LEFT, bg=background, fg="maroon",
-                                  padx=10, pady=10)
+                                                           font="arial 10 italic",
+                                                           justify=LEFT, bg=background, fg="maroon",
+                                                           padx=10, pady=10)
         self.history_text.grid(row=1)
 
         # History Output goes here.. (row 2)
@@ -103,12 +103,103 @@ class History:
                                               "data to a text file if"
                                               "desired.")
 
+            # Export Button
+            self.export_button = Button(self.export_dismiss_frame, text="Export",
+                                        font="Arial 12 bold",
+                                        command=lambda: self.export(calc_history))
+            self.export_button(row=0, column=0)
+
             # Dismiss Button
             self.dismiss_button = Button(self.export_dismiss_frame, test="Dismiss",
-                                         font="Arial 12 bold", command=partial(self.close_history))
+                                         font="Arial 12 bold",
+                                         command=partial(self.close_history, partner))
             self.dismiss_button.grid(row=0, column=1)
 
         def close_history(self, partner):
             # Put history button back to normal...
             partner.history_button.config(state=NORMAL)
             self.history_box.destroy()
+
+        def export(self, calc_history):
+            Export(self, calc_history)
+
+
+class Export:
+    def __init__(self, partner, calc_history):
+
+        print(calc_history)
+
+        background = "a9ef99"  # Pale green
+
+        # disable export button
+        partner.export_button.config(state=DISABLED)
+
+        # Sets up child window (ie: export box)
+        self.export_box = Toplevel()
+
+        # If users press cross at top, closes export and
+        # 'releases' export button
+        self.export_box.protocol('WM_DELETE_WINDOW',
+                                 partial(self.close_export, partner))
+
+        # Set up GUI Frame
+        self.export_frame = Frame(self.export_box, width=300, bg=background)
+        self.export_frame.grid()
+
+        # Set up Exporting heading (row 0)
+        self.how_heading = Label(self.export_frame, text="Export / Instructions",
+                                 font="arial 14 bold", bg=background)
+        self.how_heading.grid(row=0)
+
+        # Save / Cancel Frame (row 4)
+        self.save_cancel_frame = Frame(self.export_frame)
+        self.save_cancel_frame.grid(row=5, pady=10)
+
+        # Save and Cancel Buttons (row 0 of save_cancel_frame)
+        self.save_button = Button(self.save_cancel_frame, text="Save",
+                                  command=partial(lambda: self.save_history(partner, calc_history)))
+        self.save_button.grid(row=0, column=0)
+
+        self.cancel_button = Button(self.save_cancel_frame, text="Cancel",
+                                    command=partial(self.close_export, partner))
+        self.cancel_button.grid(row=0, column=1)
+
+    def save_history(self, partner, calc_history):
+
+        # Regular expression to check filename is valid
+        valid_char = "[A-Za-z-0-9_]"
+        has_errors = "no"
+
+        filename = self.filename_entry.get()
+        print(filename)
+
+        for letter in filename:
+            if re.match(valid_char, letter):
+                continue
+
+            elif letter == "":
+                problem = "(no spaces allowed)"
+
+            else:
+                problem = ("(no {}'s allowed)".format(letter))
+                has_errors = "yes"
+                break
+
+        if filename == "":
+            problem = "can't be blank"
+            has_errors = "yes"
+
+        if has_errors == "yes":
+            # Display error message
+
+        def close_export(self, partner):
+            # Put export button back to normal...
+            partner.export_button.config(state=NORMAL)
+            self.export_box.destroy()
+
+# main routine
+if __name__ == "__main__":
+    root = Tk()
+    root.title("Temperature Converter")
+    something = Converter()
+    root.mainloop()
