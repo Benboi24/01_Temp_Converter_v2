@@ -151,7 +151,7 @@ class Export:
                                  font="arial 14 bold", bg=background)
         self.how_heading.grid(row=0)
 
-        # Save / Cancel Frame (row 4)
+        # Save / Cancel Frame (row 5)
         self.save_cancel_frame = Frame(self.export_frame)
         self.save_cancel_frame.grid(row=5, pady=10)
 
@@ -182,8 +182,8 @@ class Export:
 
             else:
                 problem = ("(no {}'s allowed)".format(letter))
-                has_errors = "yes"
-                break
+            has_errors = "yes"
+            break
 
         if filename == "":
             problem = "can't be blank"
@@ -191,6 +191,42 @@ class Export:
 
         if has_errors == "yes":
             # Display error message
+            self.save_error_label.config(text="Invalid filename - {}".format())
+            # Change entry box background to pink
+            self.fliename_entry.config(bg="#ffafaf")
+            print()
+
+        else:
+            # If there are no errors, generate text file and then close dialouge
+            # add .txt suffix!
+            filename= filename + ".txt"
+
+            # create file name to hold data
+            f = open(filename + "w+")
+
+            # add new line  at end of each item
+            for item in calc_history:
+                f.write(item + "\n")
+
+            # close file
+            f.close()
+
+            # close dialogue
+            self.close_export(partner)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         def close_export(self, partner):
             # Put export button back to normal...
