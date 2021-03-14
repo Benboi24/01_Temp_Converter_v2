@@ -26,7 +26,7 @@ class Converter:
         self.temp_heading_label.grid(row=0)
 
         # history Button (row 1)
-        self.history_button = Button(self.converter_frame, text="Help",
+        self.history_button = Button(self.converter_frame, text="History",
                                      font=("Arial", "14"),
                                      padx=10, pady=10,
                                      command=lambda: self.history(self.all_calc_list))
@@ -104,7 +104,7 @@ class History:
         self.export_button.grid(row=0, column=0)
 
         # Dismiss Button
-        self.dismiss_button = Button(self.export_dismiss_frame, test="Dismiss",
+        self.dismiss_button = Button(self.export_dismiss_frame, text="Dismiss",
                                      font="Arial 12 bold", command=partial(self.close_history))
         self.dismiss_button.grid(row=0, column=1)
 
