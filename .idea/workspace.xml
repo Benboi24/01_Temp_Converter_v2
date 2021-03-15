@@ -35,12 +35,10 @@
       <file leaf-file-name="12_Assembled_Converter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/12_Assembled_Converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="287" column="56" selection-start-line="287" selection-start-column="56" selection-end-line="287" selection-end-column="56" />
+            <state relative-caret-position="136">
+              <caret line="281" column="32" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#3710#5563#0" expanded="false" />
-                <element signature="e#5607#5743#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -73,7 +71,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="width" value="1068" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -358,7 +356,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1068" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3611691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -414,8 +412,26 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#3710#5563#0" expanded="false" />
-            <element signature="e#5607#5743#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_Help_GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="34" selection-end-column="64" />
+          <folding>
+            <element signature="e#1236#2745#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12_Assembled_Converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -433,8 +449,6 @@
           <caret line="379" column="21" selection-start-line="379" selection-start-column="21" selection-end-line="379" selection-end-column="21" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#3710#5563#0" expanded="false" />
-            <element signature="e#5607#5743#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -462,8 +476,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#3710#5563#0" expanded="false" />
-            <element signature="e#5607#5743#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -488,8 +500,6 @@
           <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#3710#5563#0" expanded="false" />
-            <element signature="e#5607#5743#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -535,8 +545,6 @@
           <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#3710#5563#0" expanded="false" />
-            <element signature="e#5607#5743#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -582,8 +590,6 @@
           <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#3710#5563#0" expanded="false" />
-            <element signature="e#5607#5743#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -670,12 +676,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/12_Assembled_Converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="287" column="56" selection-start-line="287" selection-start-column="56" selection-end-line="287" selection-end-column="56" />
+        <state relative-caret-position="136">
+          <caret line="281" column="32" selection-start-line="281" selection-start-column="32" selection-end-line="281" selection-end-column="32" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#3710#5563#0" expanded="false" />
-            <element signature="e#5607#5743#0" expanded="false" />
           </folding>
         </state>
       </provider>
