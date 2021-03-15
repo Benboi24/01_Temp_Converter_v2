@@ -8,7 +8,7 @@ class Converter:
     def __init__(self):
 
         # Formatting variables
-        self.help = None
+        # self.help = None
         background_color = "light blue"
 
         # Initialise list to hold calculation history
@@ -280,7 +280,7 @@ class Export:
         background = "#a9ef99"  # Pale green
 
         # disable history button
-        partner.history_button.config(state=DISABLED)
+        partner.export_button.config(state=DISABLED)
 
         # Sets up child window (ie: export box)
         self.export_box = Toplevel()
@@ -308,7 +308,7 @@ class Export:
                                                            "to a text file",
                                   justify=LEFT, width=40,
                                   bg=background, wrap=250)
-        self.export_text.grid(row=1)
+        self.history_text.grid(row=1)
 
         # Warning text (label, row 2)
         self.export_text = Label(self.export_frame, text="If the filename "
